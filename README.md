@@ -11,7 +11,7 @@ Sparrowdo module to install CPAN modules using App::cpm - a fast CPAN module ins
 
     $ cat sparrowfile
 
-    module_run 'Cpm', %( list => 'Moose DBI CGI' );
+    module_run 'Cpm', %( list => 'Moose DBI CGI', verbose => 1 );
 
 # Author
 

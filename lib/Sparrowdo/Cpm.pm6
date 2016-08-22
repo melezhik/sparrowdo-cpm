@@ -24,10 +24,11 @@ our sub tasks (%args) {
       task => 'install CPAN modules',
       plugin => 'app-cpm',
       parameters => %(
-        list => %args<list>,
-        install-base => %args<install-base>,
-        http_proxy  => input_params('HttpProxy'),
-        https_proxy => input_params('HttpsProxy'),        
+        list          => %args<list>,
+        verbose       => $args<verbose>,
+        install-base  => %args<install-base>,
+        http_proxy    => input_params('HttpProxy'),
+        https_proxy   => input_params('HttpsProxy'),        
       );
     );
     
