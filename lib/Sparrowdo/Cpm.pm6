@@ -4,8 +4,10 @@ unit module Sparrowdo::Cpm;
 
 use Sparrowdo;
 
+
 our sub tasks (%args) {
 
+  set_spl( app-cpm => 'https://github.com/melezhik/app-cpm.git');
 
   task_run  %(
     task => 'install App::cpm',
@@ -18,17 +20,16 @@ our sub tasks (%args) {
     )
   );
 
-
-  task_run  %(
-    task => 'install cpan modules',
-    plugin => 'app-cpm',
-    parameters => %( 
-      list => %args<list>, 
-      http_proxy  => input_params('HttpProxy'),
-      https_proxy => input_params('HttpsProxy'),
-    )
-  );
-
-
+    task_run  %(
+      task => 'install CPAN modules',
+      plugin => 'app-cpm',
+      parameters => %(
+        list => %args<list>,
+        install-base => %args<install-base>,
+        http_proxy  => input_params('HttpProxy'),
+        https_proxy => input_params('HttpsProxy'),        
+      );
+    );
+    
 }
 
