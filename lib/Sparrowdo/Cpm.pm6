@@ -7,7 +7,7 @@ use Sparrowdo;
 
 our sub tasks (%args) {
 
-  set_spl %( app-cpm => 'https://github.com/melezhik/app-cpm.git');
+  # set_spl %( app-cpm => 'https://github.com/melezhik/app-cpm.git');
 
   task_run  %(
     task => 'install App::cpm',
