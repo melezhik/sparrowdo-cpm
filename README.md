@@ -13,6 +13,17 @@ Sparrowdo module to install CPAN modules using App::cpm - a fast CPAN module ins
 
     module_run 'Cpm', %( list => 'Moose DBI CGI', verbose => 1 );
 
+# Parameters
+
+## install-base 
+
+Sets install base, by default install-base is not set, and cpm installs CPAN
+modules into global %INC, see also `-g` parameter of cpm client.
+
+## verbose
+
+Sets cpm client verbose mode on.
+
 # Author
 
 [Alexey Melezhik](mailto:melezhik@gmail.com)
