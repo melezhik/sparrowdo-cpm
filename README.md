@@ -33,9 +33,9 @@ This is how user/install-base result in cpm install run:
     +-----------+--------------+---------------------------------------------+
     | user      | install-base | cpm run                                     |
     +-----------+--------------+---------------------------------------------+
-    | not set   | not set      | cpm install -g # global %INC install        |
-    | set       | not set      | cpan install # install into ./local         |
-    | not set   | set          | coan install -L /install/base               |
+    | not set   | not set      | cpm install -g   # global %INC install      |
+    | set       | not set      | cpan install     # install into ./local     |
+    | not set   | set          | cpan install -L /install/base # into base   |
     +-----------+--------------+---------------------------------------------+
 
 ## verbose
