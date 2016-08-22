@@ -7,7 +7,7 @@ use Sparrowdo;
 
 our sub tasks (%args) {
 
-  # set_spl %( app-cpm => 'https://github.com/melezhik/app-cpm.git');
+  set_spl %( app-cpm-dev => 'https://github.com/melezhik/app-cpm.git');
 
   task_run  %(
     task => 'install App::cpm',
@@ -22,10 +22,11 @@ our sub tasks (%args) {
 
     task_run  %(
       task => 'install CPAN modules',
-      plugin => 'app-cpm',
+      plugin => 'app-cpm-dev',
       parameters => %(
         list          => %args<list>,
         verbose       => %args<verbose>,
+        user          => %args<user>,
         install-base  => %args<install-base>,
         http_proxy    => input_params('HttpProxy'),
         https_proxy   => input_params('HttpsProxy'),        
