@@ -15,6 +15,10 @@ Sparrowdo module to install CPAN modules using App::cpm - a fast CPAN module ins
 
 # Parameters
 
+## list 
+
+Should be space separated list of CPAN modules to install.
+
 ## install-base 
 
 Sets install base, by default install-base is not set, and cpm installs CPAN
