@@ -19,10 +19,24 @@ Sparrowdo module to install CPAN modules using App::cpm - a fast CPAN module ins
 
 Should be space separated list of CPAN modules to install.
 
+## user
+
+Sets user to runs a cpm client. By default user is not set.
+
 ## install-base 
 
-Sets install base, by default install-base is not set, and cpm installs CPAN
-modules into global %INC, see also `-g` parameter of cpm client.
+Sets install base. By default install-base is not set.
+
+
+This is how user/install-base result in cpm install run:
+
+    +-----------+--------------+---------------------------------------------+
+    | user      | install-base | cpm run                                     |
+    +-----------+--------------+---------------------------------------------+
+    | not set   | not set      | cpm install -g # global %INC install        |
+    | set       | not set      | cpan install # install into ./local         |
+    | not set   | set          | coan install -L /install/base               |
+    +-----------+--------------+---------------------------------------------+
 
 ## verbose
 
