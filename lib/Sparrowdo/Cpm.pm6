@@ -25,7 +25,7 @@ our sub tasks (%args) {
       plugin => 'app-cpm',
       parameters => %(
         list          => %args<list>,
-        verbose       => $args<verbose>,
+        verbose       => %args<verbose>,
         install-base  => %args<install-base>,
         http_proxy    => input_params('HttpProxy'),
         https_proxy   => input_params('HttpsProxy'),        
